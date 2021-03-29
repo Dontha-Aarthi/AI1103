@@ -156,14 +156,21 @@ So,
 \end{align}
 Required probability
 \begin{align}
- &=\pr{max\{X_1,X_2,\cdots X_Y\}\le 1}
+ &=\pr{max\{X_1,X_2,\cdots X_Y\}\le 1}\label{req_prob}
  \end{align}
- Since, $\{X_n\}_{n\ge 1}$ is a sequence of independent variables and $Y$ is also independent of $\{X_n\}_{n\ge 1}$ so, required probability
+ Since, $\{X_n\}_{n\ge 1}$ is a sequence of independent variables and $Y$ is also independent of $\{X_n\}_{n\ge 1}$.\\
+ And also in \eqref{req_prob}, $X_Y$ depends on $Y$, like if $Y=1$, then there is only $X_1$, if $Y=2$, then there's $X_1,X_2$, so required probability
  \begin{align}
+ & \begin{multlined}
+    =\pr{max\{X_1\}\le 1|Y=1}\cdot \pr{Y=1}+\\
+    \pr{max\{X_1,X_2\}\le 1|Y=2}\cdot \pr{Y=2}+\cdots \infty 
+\end{multlined}\\
 & \begin{multlined}
     =\pr{max\{X_1\}\le 1}\cdot \pr{Y=1}+\\
     \pr{max\{X_1,X_2\}\le 1}\cdot \pr{Y=2}+\cdots \infty 
 \end{multlined}\\
+\end{align}
+\begin{align}
 &\begin{multlined}
     =\pr{X_1\le 1}\cdot \pr{Y=1}+\\
     \pr{X_1,X_2\le 1}\cdot\pr{Y=2}+\cdots \infty
