@@ -139,17 +139,17 @@ Let A be the event of an accident occurring in a given month.
 So, 
 \begin{align}
     \pr{A}&=\frac{1}{100}\\
-    \pr{A'}&=1-\pr{A}\\
-    \pr{A'}&=\frac{99}{100}
+    \pr{A^{\prime}}&=1-\pr{A}\\
+    \pr{A^{\prime}}&=\frac{99}{100}
 \end{align}
 So, $\pr{n}$ can be written as:
 \begin{align}
-    \pr{n}=\pr{A'\times A'\cdots A'}_{A'\; n\; times}
+    \pr{n}=\pr{A^{\prime}\times A^{\prime}\cdots A^{\prime}}_{A^{\prime}\; n\; times}
 \end{align}
 Its given that events of individual months are independent of each other, so
 \begin{align}
-    \pr{n}&=\pr{A'}\cdot \pr{A'} \cdots \pr{A'}_{A'\; n\; times}\\
-        &=(\pr{A'})^n \label{eq_ind}
+    \pr{n}&=\pr{A^{\prime}}\cdot \pr{A^{\prime}} \cdots \pr{A^{\prime}}_{A^{\prime}\; n\; times}\\
+        &=(\pr{A^{\prime}})^n \label{eq_ind}
 \end{align}
 Given:
 \begin{align}
@@ -157,11 +157,11 @@ Given:
 \end{align}
 So, from \eqref{eq_ind},
 \begin{align}
-    (\pr{A'})^n\le \frac{1}{2} \label{eq_log}
+    (\pr{A^{\prime}})^n\le \frac{1}{2} \label{eq_log}
 \end{align}
 
 \begin{align}
-     \implies \ln{ (\pr{A'})^n} &\le \ln {\frac{1}{2}}\\
+     \implies \ln{ (\pr{A^{\prime}})^n} &\le \ln {\frac{1}{2}}\\
      \implies n\cdot \ln {\frac{99}{100}} &\le \ln {\frac{1}{2}}\\
      \implies n &\ge \frac{\ln {\frac{1}{2}}}{\ln {\frac{99}{100}}}\\
      \implies n &\ge 68.9675
