@@ -1,0 +1,248 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\newcommand{\comb}[2]{{}^{#1}\mathrm{C}_{#2}}
+\providecommand{\abs}[1]{\vert#1\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\lVert#1\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E[ #1 ]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 7}
+\author{Dontha Aarthi-CS20BTECH11015}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+Download latex-tikz codes from 
+
+\begin{lstlisting}
+https://github.com/Dontha-Aarthi/AI1103/blob/main/Assignment7/assignment7.tex
+\end{lstlisting}
+\begin{center}
+  \section{\textbf{CSIR UGC NET EXAM (Dec 2014), Q.108}} 
+\end{center}
+    $N,A_1,A_2\cdots$ are independent real valued random variables such that 
+    \begin{align}
+        \pr{N=k}=(1-p)p^k,k=0,1,2,3\cdots
+    \end{align}
+    where $0<p<1$ and $\{A_i:i=1,2,\cdots\}$ is a sequence of independent and identically distributed bounded random variables. Let 
+    \begin{align}
+        X(w) = 
+        \begin{cases}
+        0  & \text{if } N(w)=0\\
+        \sum_{j=1}^{k} A_j & \text{if } N(w)=k,k=1,2,3\cdots 
+        \end{cases}
+    \end{align}
+    Which of the following are necessarily correct?\\
+    \begin{enumerate}
+        \item $X$ is a bounded random variable. 
+        \item Moment generating function $m_X$ of $X$ is
+        \begin{align}
+            m_X(t)=\dfrac{1-p}{1-pm_A(t)}, t\in \mathbb{R},
+        \end{align}
+        where $m_A$ is moment generating function of $A_1$.
+        \item Characteristic function $\varphi_X$ of $X$ is
+        \begin{align}
+            \varphi_X(t)=\dfrac{1-p}{1-p\varphi_A(t)},t\in \mathbb{R},
+        \end{align}
+        where $\varphi_A$ is the characteristic function of $A_1$.
+        \item $X$ is symmetric about 0.
+    \end{enumerate}
+\section{Solution}
+Since $k$ is not bounded, $X$ cannot be a bounded random variable necessarily.\\
+$\therefore$ \textbf{option 1 is incorrect}.\\
+
+The characteristic function of a random variable is defined as
+\begin{align}
+    \varphi_X(t)=E[e^{itX}]
+\end{align}
+And using this,
+\begin{align}
+    E[X]=\sum_{y} E[X|Y=y]\cdot \pr{Y=y}
+\end{align}
+We get 
+\begin{align}
+    \varphi_X(t)&=\sum_{k=0}^{\infty}\left(E[e^{it\sum_{j=1}^{k} A_j}
+    |N=k]\cdot \pr{N=k}\right)\\
+    &\begin{multlined}
+    =E[e^{it\cdot 0}]\cdot \pr{N=0}+\\
+    \sum_{k=1}^{\infty}\left(E[e^{it\sum_{j=1}^{k} A_j}
+    |N=k]\cdot \pr{N=k}\right)
+    \end{multlined}\\
+    &\begin{multlined}
+    =E[1]\cdot (1-p)+\\
+    \sum_{k=1}^{\infty}\left(E[e^{it\sum_{j=1}^{k} A_j}|N=k]\cdot \pr{N=k}\right) \label{eq_0}
+    \end{multlined}\\
+\end{align}
+Since $A_1,A_2\cdots$ are independent, \eqref{eq_0} can be written as
+\begin{align}
+    &=(1-p)+\sum_{k=1}^{\infty}\left(\pr{N=k}\cdot\prod_{j=1}^k E[e^{itA_j}]\right) \\
+    &=(1-p)+\sum_{k=1}^{\infty}\left(\pr{N=k}\cdot\prod_{j=1}^k \varphi_{A_j}(t)]\right) \label{eq_1}
+\end{align}
+Since $A_1,A_2\cdots$ are identical, \eqref{eq_1} can be written as
+\begin{align}
+    =(1-p)+\sum_{k=1}^{\infty}\left((1-p)p^k\cdot(\varphi_{A}(t))^k\right)\;\label{eq_2}
+\end{align}
+where, $\varphi_{A}(t)$ is characteristic function of $A_1$.\\
+On simplifying sum of infinite terms in geometric progression in \eqref{eq_2}, we get
+\begin{align}
+    &=(1-p)\cdot \left(1+\frac{p\cdot \varphi_A(t)}{1-p\cdot \varphi_A(t)}\right)\\
+    &=\frac{1-p}{1-p\cdot \varphi_A(t) }
+\end{align}
+$\therefore$ \textbf{option 3 is correct}.\\
+
+The moment generating function of a random variable is defined as
+\begin{align}
+    M_X(t)=E[e^{tX}]
+\end{align}
+So,
+\begin{align}
+    M_X(t)&=\sum_{k=0}^{\infty}\left(E[e^{t\sum_{j=1}^{k} A_j}
+    |N=k]\cdot \pr{N=k}\right)\\
+    &\begin{multlined}
+    =E[e^{t\cdot 0}]\cdot \pr{N=0}+\\
+    \sum_{k=1}^{\infty}\left(E[e^{t\sum_{j=1}^{k} A_j}
+    |N=k]\cdot \pr{N=k}\right)
+    \end{multlined}\\
+    &\begin{multlined}
+    =E[1]\cdot (1-p)+\\
+    \sum_{k=1}^{\infty}\left(E[e^{t\sum_{j=1}^{k} A_j}|N=k]\cdot \pr{N=k}\right) \label{eq_3}
+    \end{multlined}
+\end{align}
+Since $A_1,A_2\cdots$ are identical and independent, \eqref{eq_3} can be written as
+\begin{align}
+    &=(1-p)+\sum_{k=1}^{\infty}\left(\pr{N=k}\cdot\prod_{j=1}^k E[e^{tA_j}]\right) \\
+    &=(1-p)+\sum_{k=1}^{\infty}\left(\pr{N=k}\cdot\prod_{j=1}^k M_{A_j}(t)\right) \\
+   & =(1-p)+\sum_{k=1}^{\infty}\left((1-p)p^k\cdot(M_{A}(t))^k\right)\;\label{eq_4}
+\end{align}
+where, $M_{A}(t)$ is moment generating function of $A_1$.\\
+On simplifying sum of infinite terms in geometric progression in \eqref{eq_4}, we get
+\begin{align}
+    &=(1-p)\cdot \left(1+\frac{p\cdot M_A(t)}{1-p\cdot M_A(t)}\right)\\
+    &=\frac{1-p}{1-p\cdot M_A(t) }
+\end{align}
+$\therefore$ \textbf{option 2 is correct}.\\
+
+Now, lets find mean of $X$.
+\begin{align}
+    \text{Mean(X)}&=\frac{\sum_{j=1}^{k} A_j}{k}
+\end{align}
+With the given conditions it is not necessary for the mean(X) to be equal to 0, therefore $X$ is not necessarily symmetric about 0.\\
+$\therefore$ \textbf{option 4 is incorrect}.
+
+\end{document}
+
+
+
+
