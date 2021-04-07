@@ -160,10 +160,42 @@ https://github.com/Dontha-Aarthi/AI1103/blob/main/Assignment7/assignment7.tex
         \item $X$ is symmetric about 0.
     \end{enumerate}
 \section{Solution}
-Since $k$ is not bounded, $X$ cannot be a bounded random variable necessarily.\\
+\begin{enumerate}
+    \item Since $k$ is not bounded, $X$ cannot be a bounded random variable necessarily.\\
 $\therefore$ \textbf{option 1 is incorrect}.\\
+\item The moment generating function of a random variable is defined as
+\begin{align}
+    M_X(t)=E[e^{tX}]
+\end{align}
+So,
+\begin{align}
+    M_X(t)&=\sum_{k=0}^{\infty}\left(E[e^{t\sum_{j=1}^{k} A_j}
+    |N=k]\cdot \pr{N=k}\right)\\
+    &\begin{multlined}
+    =E[e^{t\cdot 0}]\cdot \pr{N=0}+\\
+    \sum_{k=1}^{\infty}\left(E[e^{t\sum_{j=1}^{k} A_j}
+    |N=k]\cdot \pr{N=k}\right)
+    \end{multlined}\\
+    &\begin{multlined}
+    =E[1]\cdot (1-p)+\\
+    \sum_{k=1}^{\infty}\left(E[e^{t\sum_{j=1}^{k} A_j}|N=k]\cdot \pr{N=k}\right) \label{eq_3}
+    \end{multlined}
+\end{align}
+Since $A_1,A_2\cdots$ are identical and independent, \eqref{eq_3} can be written as
+\begin{align}
+    &=(1-p)+\sum_{k=1}^{\infty}\left(\pr{N=k}\cdot\prod_{j=1}^k E[e^{tA_j}]\right) \\
+    &=(1-p)+\sum_{k=1}^{\infty}\left(\pr{N=k}\cdot\prod_{j=1}^k M_{A_j}(t)\right) \\
+   & =(1-p)+\sum_{k=1}^{\infty}\left((1-p)p^k\cdot(M_{A}(t))^k\right)\;\label{eq_4}
+\end{align}
+where, $M_{A}(t)$ is moment generating function of $A_1$.\\
+On simplifying sum of infinite terms in geometric progression in \eqref{eq_4}, we get
+\begin{align}
+    &=(1-p)\cdot \left(1+\frac{p\cdot M_A(t)}{1-p\cdot M_A(t)}\right)\\
+    &=\frac{1-p}{1-p\cdot M_A(t) }
+\end{align}
+$\therefore$ \textbf{option 2 is correct}.\\
 
-The characteristic function of a random variable is defined as
+\item The characteristic function of a random variable is defined as
 \begin{align}
     \varphi_X(t)=E[e^{itX}]
 \end{align}
@@ -202,45 +234,14 @@ On simplifying sum of infinite terms in geometric progression in \eqref{eq_2}, w
 \end{align}
 $\therefore$ \textbf{option 3 is correct}.\\
 
-The moment generating function of a random variable is defined as
-\begin{align}
-    M_X(t)=E[e^{tX}]
-\end{align}
-So,
-\begin{align}
-    M_X(t)&=\sum_{k=0}^{\infty}\left(E[e^{t\sum_{j=1}^{k} A_j}
-    |N=k]\cdot \pr{N=k}\right)\\
-    &\begin{multlined}
-    =E[e^{t\cdot 0}]\cdot \pr{N=0}+\\
-    \sum_{k=1}^{\infty}\left(E[e^{t\sum_{j=1}^{k} A_j}
-    |N=k]\cdot \pr{N=k}\right)
-    \end{multlined}\\
-    &\begin{multlined}
-    =E[1]\cdot (1-p)+\\
-    \sum_{k=1}^{\infty}\left(E[e^{t\sum_{j=1}^{k} A_j}|N=k]\cdot \pr{N=k}\right) \label{eq_3}
-    \end{multlined}
-\end{align}
-Since $A_1,A_2\cdots$ are identical and independent, \eqref{eq_3} can be written as
-\begin{align}
-    &=(1-p)+\sum_{k=1}^{\infty}\left(\pr{N=k}\cdot\prod_{j=1}^k E[e^{tA_j}]\right) \\
-    &=(1-p)+\sum_{k=1}^{\infty}\left(\pr{N=k}\cdot\prod_{j=1}^k M_{A_j}(t)\right) \\
-   & =(1-p)+\sum_{k=1}^{\infty}\left((1-p)p^k\cdot(M_{A}(t))^k\right)\;\label{eq_4}
-\end{align}
-where, $M_{A}(t)$ is moment generating function of $A_1$.\\
-On simplifying sum of infinite terms in geometric progression in \eqref{eq_4}, we get
-\begin{align}
-    &=(1-p)\cdot \left(1+\frac{p\cdot M_A(t)}{1-p\cdot M_A(t)}\right)\\
-    &=\frac{1-p}{1-p\cdot M_A(t) }
-\end{align}
-$\therefore$ \textbf{option 2 is correct}.\\
-
-Now, lets find mean of $X$.
+\item Now, lets find mean of $X$.
 \begin{align}
     \text{Mean(X)}&=\frac{\sum_{j=1}^{k} A_j}{k}
 \end{align}
 With the given conditions it is not necessary for the mean(X) to be equal to 0, therefore $X$ is not necessarily symmetric about 0.\\
 $\therefore$ \textbf{option 4 is incorrect}.
-
+\end{enumerate}
+$\therefore$ The correct options are (2) and (3).
 \end{document}
 
 
