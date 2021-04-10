@@ -1,0 +1,185 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\newcommand{\comb}[2]{{}^{#1}\mathrm{C}_{#2}}
+\providecommand{\abs}[1]{\vert#1\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\lVert#1\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E[ #1 ]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Challenging Problem 3}
+\author{Dontha Aarthi-CS20BTECH11015}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+Download latex-tikz codes from 
+
+\begin{lstlisting}
+https://github.com/Dontha-Aarthi/AI1103/blob/main/Assignment6/assignment6.tex
+\end{lstlisting}
+\begin{center}
+  \section{\textbf{UGC/MATH 2019, Q.50}} 
+\end{center}
+    Let $X_1, X_2, X_3, X_4, X_5$ be \textit{i.i.d.} random variables having a continuous distribution function. Then 
+    \begin{equation*}
+    \begin{split}
+        \pr{X_1 > X_2 > X_3 > X_4 > X_5 | X_1 &= max(X_1, X_2, \\
+        & \qquad X_3, X_4, X_5)}
+    \end{split}
+\end{equation*}
+equals \rule{1cm}{0.2mm}.
+\begin{description}
+\item[$\brak{A}$]$\dfrac{1}{4}$ \\
+\item[$\brak{B}$]$\dfrac{1}{5}$  \\
+\item[$\brak{C}$]$\dfrac{1}{4!}$  \\
+\item[$\brak{D}$]$\dfrac{1}{5!}$  \\
+\end{description}
+\section{Solution}
+Required probability 
+\begin{align}
+    \begin{split}
+        &= \pr{X_1 > X_2 > X_3 > X_4 > X_5 | X_1 = \\
+        &\qquad max\brak{X_1, X_2, X_3, X_4, X_5}}
+    \end{split}
+    \\
+    &= \pr{X_2 > X_3 > X_4 > X_5} \label{eq_0}
+\end{align}
+CDF in terms of PDF is
+\begin{align}
+   F(x) = \int\limits_{-\infty}^xf(t) dt
+\end{align}
+And, PDF in terms of CDF is
+\begin{align}
+     f(x) = \dfrac{d}{dx}F(x)
+\end{align}
+The PDF of $X$ is
+\begin{align}
+    F_X(x) &= \int\limits_{-\infty}^\infty f(x) dx
+\end{align}
+\eqref{eq_0} can be written in terms of PDF as
+\begin{align}
+     &=\int\limits_{-\infty}^\infty f_X(x) \left(\int\limits_{-\infty}^xf_X(t)\left(\int\limits_{-\infty}^tf_X(z)\left(\int\limits_{-\infty}^xf_X(k)dk\right)dz\right)dt\right)dx \\
+     &=\int\limits_{-\infty}^\infty f_X(x) \left(\int\limits_{-\infty}^xf_X(t)\left(\int\limits_{-\infty}^tf_X(z)\left(F_X(z)\right)dz\right)dt\right)dx \\
+      &=\int\limits_{-\infty}^\infty f_X(x) \left(\int\limits_{-\infty}^xf_X(t)\dfrac{(F_X(t))^2}{2}dt\right)dx \\
+      &=\int\limits_{-\infty}^\infty f_X(x)\dfrac{(F_X(x))^3}{2\times 3}dx \\
+      &=\cfrac{F^{4}_X(x)}{4\times 3\times 2} \biggr \vert_      {-\infty}^{\infty} \\
+      &=\dfrac{1}{4!}
+\end{align}
+
+\end{document}
+
+
+
+
